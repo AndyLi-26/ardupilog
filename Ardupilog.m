@@ -830,8 +830,8 @@ classdef Ardupilog < dynamicprops & matlab.mixin.Copyable
             end
             
             if isempty(axisHandle)
-                fh = figure();
-                newAxisHandle = axes(fh);
+                %figure(figf);
+                %newAxisHandle = axes(gcf);
                 plot(obj.(messageName).TimeS, obj.(messageName).(fieldName), style);
                 xlabel('Time (s)');
                 label = obj.getLabel(msgFieldName);
